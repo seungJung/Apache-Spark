@@ -1,0 +1,39 @@
+response = client.delete_crawler(
+    Name='crawler_name'
+)
+
+response = client.create_crawler(
+    Name='crawler_name',
+    Role= ‘IAM_role’,
+    DatabaseName='database_name’,
+    Description='string',
+    Targets={
+        'S3Targets': [
+            {
+                'Path': 'string',
+                'Exclusions': [
+                    'string',
+                ]
+            },
+        ],
+        'JdbcTargets': [
+            {
+                'ConnectionName': ‘ConnectionName’,
+                'Path': ‘Include_path’,
+                'Exclusions': [
+                    'string',
+                ]
+            },
+        ]
+    },
+    Schedule='string',
+    Classifiers=[
+        'string',
+    ],
+    TablePrefix='string',
+    SchemaChangePolicy={
+        'UpdateBehavior': 'LOG'|'UPDATE_IN_DATABASE',
+        'DeleteBehavior': 'LOG'|'DELETE_FROM_DATABASE'|'DEPRECATE_IN_DATABASE'
+    },
+    Configuration='string'
+)
