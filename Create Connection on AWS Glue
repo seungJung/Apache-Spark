@@ -1,0 +1,19 @@
+response = client.create_connection(
+    ConnectionInput={
+        'Name': 'Redshift_abcde03.aabbcc112233.us-west-2.redshift.amazonaws.com_dev',
+        'Description': 'Created from SCT',
+        'ConnectionType': 'JDBC',
+        'ConnectionProperties': {
+            'JDBC_CONNECTION_URL': 'jdbc:redshift://aabbcc03.aabbcc112233.us-west-2.redshift.amazonaws.com:5439/dev',
+            'USERNAME': 'user_name',
+            'PASSWORD': 'password'
+        },
+        'PhysicalConnectionRequirements': {
+            'AvailabilityZone': 'us-west-2c',
+            'SubnetId': 'subnet-a1b23c45',
+            'SecurityGroupIdList': [
+                'sg-000a2b3c', 'sg-1a230b4c', 'sg-aba12c3d', 'sg-1abb2345'
+            ]
+        }
+    }
+)
