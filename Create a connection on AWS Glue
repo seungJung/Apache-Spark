@@ -17,3 +17,4 @@ response = client.create_connection(
         }
     }
 )
+# https://docs.aws.amazon.com/ko_kr/SchemaConversionTool/latest/userguide/CHAP-converting-aws-glue.html
